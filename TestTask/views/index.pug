@@ -1,0 +1,41 @@
+extends layout
+
+block content
+  .card.card-body
+    h5.card-title First task
+    h6.card-subtitle.mb-2.text-muted Updating the clientTypeName field for all rows in the Account table
+    p.card-text.row
+      label.col-sm-2 Enter new type: 
+      input.col-sm-4#type(type='text', value='New clientTypeName')
+    .d-md-block.text-center
+      button.btn.btn-primary(onclick="executeFirst()") Submit
+
+  br
+  .card.card-body
+    h5.card-title Second task (ver. 1)
+    h6.card-subtitle.mb-2.text-muted Updating the individualName field for rows with certain names in the Account table
+    p.card-text.row
+      .fields
+        label.col-sm-2 Enter names: 
+        input.col-sm-4#names1(type='text', value='AccountName2, AccountName3')
+      br
+      .fields
+        label.col-sm-2 Enter new line: 
+        input.col-sm-4#indName1(type='text', value='New individualName')
+    .d-md-block.text-center
+      button.btn.btn-primary(onclick="executeSecondV1()") Submit
+
+  br
+  .card.card-body
+    h5.card-title Second task (ver. 2)
+    h6.card-subtitle.mb-2.text-muted Updating the individualName field for rows in the Account table with certain names in the Client table
+    p.card-text.row
+      .fields
+        label.col-sm-2 Enter names: 
+        input.col-sm-4#names2(type='text', value='ClientName1, ClientName2')
+      br
+      .fields
+        label.col-sm-2 Enter new line: 
+        input.col-sm-4#indName2(type='text', value='New individualName')
+    .d-md-block.text-center
+      button.btn.btn-primary(onclick="executeSecondV2()") Submit
